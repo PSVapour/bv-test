@@ -3,8 +3,8 @@
 ## Installation
 
 ```bash
-git clone https://github.com/PSVapour/febe-bv-api-ui.git
-cd febe-bv-api-ui
+git clone https://github.com/PSVapour/bv-test.git
+cd bv-test
 npm install
 ```
 

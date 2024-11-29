@@ -35,8 +35,8 @@ const WorkerCard: React.FC<WorkerCardProps> = ({ worker }) => {
                     value={progress}
                     sx={{
                         mt: 1,
-                        height: 10,
-                        borderRadius: 5,
+                        height: 20,
+                        borderRadius: 10,
                         '& .MuiLinearProgress-bar': {
                             backgroundColor: progress > 99 ? 'green' : progress > 75 ? 'orange' : 'red',
                         },
