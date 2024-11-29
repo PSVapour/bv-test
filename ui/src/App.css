@@ -1,0 +1,8 @@
+body {
+  width: 100vw;
+  place-items: stretch;
+}
+
+#root {
+  width: 100%;
+}
