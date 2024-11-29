@@ -3,9 +3,9 @@ import { Avatar, Box, Card, LinearProgress, Typography } from '@mui/material';
 import { Worker } from '../types/Worker';
 
 const calculateHoursWorked = (worker: Worker): number => {
-    return worker.visits?.reduce((acc, visit) => {
-        const difference = new Date(visit.endDateTime).getTime() - new Date(visit.startDateTime).getTime();
-        const hours = difference / 3600000;
+    return worker.visits?.reduce((acc, visit): number => {
+        const difference: number = new Date(visit.endDateTime).getTime() - new Date(visit.startDateTime).getTime();
+        const hours: number = difference / 3600000;
         return acc + hours;
     }, 0) ?? 0;
 };

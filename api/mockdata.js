@@ -1,4 +1,4 @@
-const supportWorkers = () => [{
+const workers = [{
     supportWorkerId: 1,
     contractedHours: 15,
     name: ' Andrew',
@@ -15,7 +15,7 @@ const supportWorkers = () => [{
     avatar: 'https://avatars.githubusercontent.com/u/3?v=4',
 }]
 
-const visits = () => [{
+const visits = [{
     visitId: 1,
     startDateTime: 1663405200000,
     endDateTime: 1663408800000,
@@ -70,7 +70,14 @@ const visits = () => [{
     supportWorkerId: 3,
 }];
 
+const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 module.exports = {
-    supportWorkers,
-    visits
+    async someDatabaseQuery(callback) {
+        await wait(10);
+        return callback({
+            workers,
+            visits
+        });
+    }
 };

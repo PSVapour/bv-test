@@ -6,7 +6,7 @@ import { Worker } from './types/Worker.ts';
 import WorkerList from './components/WorkerList.tsx';
 import {
   getWorkersAndVisits
-} from './services/serviceWorkers.ts';
+} from './services/supportWorkers.ts';
 
 function App() {
   const [workersAndVisits, setWorkersAndVisits] = useState<Worker[]>([]);
