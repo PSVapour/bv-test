@@ -80,7 +80,7 @@ app.get('/getWorkersAndVisits', async (req, res) => {
             return workers.map(worker => {
                 return {
                     ...worker,
-                    visits: allVisits.filter(visit => visit.supportWorkerId === worker.supportWorkerId)
+                    visits: visits.filter(visit => visit.supportWorkerId === worker.supportWorkerId)
                 };
             });
         });
